@@ -1,0 +1,85 @@
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.clearfix:after {
+	clear: both;
+}
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333333;
+	background: #ffffff;
+}
+a {
+	color: #0088cc;
+	text-decoration: none;
+}
+a:hover {
+	color: #005580;
+	text-decoration: underline;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 650px;
+	width: 100%;
+}
+.header,
+.colophon {
+	background: #2c3e50;
+	color: #ffffff;
+	width: 100%;
+}
+.site-title,
+.site-title a,
+.site-title a:hover {
+	color: #9b59b6;
+	font-size: 28px;
+	line-height: 30px;
+	margin: 0px 0 5px 5px;
+	padding: 13px 0;
+	text-shadow: 0 1px 1px rgba(255,255,255,.2);
+	text-decoration: none;
+}
+.uc {
+	float: right;
+	margin: 20px 5px 0 0;
+}
+.content {
+	margin: 0 auto;
+	padding: 20px;
+	width: 100%;
+}
+.login-form {
+	margin: 0 auto;
+	max-width: 300px;
+}
+.login-title {
+	text-align: center;
+}
+label {
+	color: #666;
+}
+label,
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+}
+input[type="text"],
+input[type="password"] {
+	margin-bottom: 20px;
+}
+.btn {
+	float: right;
+}
+.credit {
+	float: right;
+	margin-right: 10px;
+}

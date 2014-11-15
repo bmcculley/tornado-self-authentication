@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <title>{{ escape(handler.settings["site_title"]) }}</title>
+    <link rel="stylesheet" href="{{ static_url("main.css") }}" type="text/css"/>
+    {% block head %}{% end %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="uc">
+          {% if current_user %}
+            Hello, {{ user }}! - 
+            <a href="/logout?next={{ url_escape(request.uri) }}">{{ _("Sign out") }}</a>
+          {% else %}
+            {% raw _('<a href="%(url)s">Sign in</a>') % {"url": "/login?next=" + url_escape(request.uri)} %}
+          {% end %}
+        </div>
+        <h1 class="site-title"><a href="/">{{ escape(handler.settings["site_title"]) }}</a></h1>
+      </div>
+      <div class="content">{% block body %}{% end %}</div>
+      <div class="colophon">
+        <p class="credit">{{ escape(handler.settings["site_title"]) }} created by <a href="http://bmcculley.ejank.com">B McCulley</a></p>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    {% block bottom %}{% end %}
+  </body>
+</html>
