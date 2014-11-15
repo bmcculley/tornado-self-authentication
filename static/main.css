@@ -16,7 +16,7 @@ body {
 	font-size: 14px;
 	line-height: 20px;
 	color: #333333;
-	background: #ffffff;
+	background: rgba(51,51,51,1) url('img/darknoise.png');
 }
 a {
 	color: #0088cc;
@@ -27,6 +27,7 @@ a:hover {
 	text-decoration: underline;
 }
 .wrapper {
+	background: #ffffff;
 	margin: 0 auto;
 	max-width: 650px;
 	width: 100%;
@@ -36,6 +37,14 @@ a:hover {
 	background: #2c3e50;
 	color: #ffffff;
 	width: 100%;
+}
+.header a,
+.colophon a {
+	color: #9b59b6;
+}
+.header a:hover,
+.colophon a:hover {
+	color: #ecf0f1;
 }
 .site-title,
 .site-title a,
@@ -67,17 +76,44 @@ a:hover {
 label {
 	color: #666;
 }
-label,
-input[type="text"],
-input[type="password"] {
+label {
 	width: 100%;
 }
 input[type="text"],
 input[type="password"] {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	height: 20px;
 	margin-bottom: 20px;
+	padding: 4px 6px;
+	width: 100%;
+	vertical-align: middle;
+	-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+			border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .btn {
 	float: right;
+	padding: 4px 12px;
+}
+.alert {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 20px;
+	color: #c09853;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+			border-radius: 4px;
+}
+.alert-error {
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
 }
 .credit {
 	float: right;

@@ -19,7 +19,11 @@ class MainHandler(BaseHandler):
 
 class LoginHandler(BaseHandler):
 	def get(self):
-		self.render('login.html')
+		try:
+			errormsg = self.get_argument("error")
+		except:
+			errormsg = ""
+		self.render("login.html", errormessage = errormsg)
 	def post(self):
 		getusername = self.get_argument("username")
 		getpassword = self.get_argument("password")
@@ -31,7 +35,8 @@ class LoginHandler(BaseHandler):
 		    if wrong==False or wrong == None:
 		        wrong=0  
 		    self.set_secure_cookie("wrong", str(int(wrong)+1))
-		    self.write('Username or password incorrect.')
+		    errormsg = "Username or password incorrect."
+		    self.redirect("login?error=" + tornado.escape.url_escape(errormsg))
 
 class LogoutHandler(BaseHandler):
     def get(self):
