@@ -15,6 +15,7 @@
             <a href="/logout?next={{ url_escape(request.uri) }}">{{ _("Sign out") }}</a>
           {% else %}
             {% raw _('<a href="%(url)s">Sign in</a>') % {"url": "/login?next=" + url_escape(request.uri)} %}
+            {% raw _('<a href="%(url)s">Register</a>') % {"url": "/register?next=" + url_escape(request.uri)} %}
           {% end %}
         </div>
         <h1 class="site-title"><a href="/">{{ escape(handler.settings["site_title"]) }}</a></h1>

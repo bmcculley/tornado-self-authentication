@@ -66,6 +66,10 @@ a:hover {
 	padding: 20px;
 	width: 100%;
 }
+.registration-form {
+	margin: 0 auto;
+	max-width: 350px;
+}
 .login-form {
 	margin: 0 auto;
 	max-width: 300px;

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form class="registration-form" action="/register" method="post">
+	{% if errormessage %}
+	    <div class="alert alert-error">{{errormessage}}</div>
+	    <div class="clearfix"></div>
+	{% end %}
+	<label for="email">Email:</label> 
+	<input name="email" id="email" type="text">
+	<label for="username">Username:</label>
+	<input name="username" id="username" type="text">
+	<label for="name">Name:</label> 
+	<input name="name" id="name" type="text">
+	<label for="password">Password:</label>
+	<input name="password" id="password" type="password">
+	<input type="submit" class="btn" id="complete-regisration" value="Register">
+	{% module xsrf_form_html() %}
+</form>
+<div class="clearfix"></div>
+{% end %}
