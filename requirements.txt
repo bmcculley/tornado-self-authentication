@@ -1,0 +1,4 @@
+bcrypt
+MySQL-python
+tornado
+torndb
